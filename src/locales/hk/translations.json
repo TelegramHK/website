@@ -1,5 +1,8 @@
 {
   "navbar":{
+    "blog": "新聞稿",
+    "apps": "應用程式",
+    "faq": "常見問題"
   },
   "landingpage":{
   },

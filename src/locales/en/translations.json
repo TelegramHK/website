@@ -1,5 +1,8 @@
 {
   "navbar":{
+    "blog": "Blog",
+    "apps": "Apps",
+    "faq": "FAQ"
   },
   "landingpage":{
   },
