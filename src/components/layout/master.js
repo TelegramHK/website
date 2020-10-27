@@ -10,6 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+
+// Bootstrap imports
+import "bootstrap/dist/css/bootstrap.min.css" // Core import
+
 import "./master.css"
 
 const Layout = ({ children }) => {

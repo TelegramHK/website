@@ -1,0 +1,17 @@
+{
+  "navbar":{
+  },
+  "landingpage":{
+  },
+  "i18n":{
+    "selector":{
+      "label": "Language 🌐"
+    }
+  },
+  "404":{
+    "title": "Lost your way?",
+    "h1": "Lost your way home?",
+    "tagline": "Come, let us home.",
+    "button": "« Homepage"
+  }
+}
