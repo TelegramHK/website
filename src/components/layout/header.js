@@ -29,7 +29,7 @@ const TelegramHeaderNav = styled(Navbar)`
     box-shadow: inset 0 -3px 0 0 #179cde;
   }
 
-  .nav-item a.nav-link, .nav-item.show a.nav-link {
+  .nav-item a.nav-link, .nav-item.show a.nav-link, .nav-item a.nav-link:focus {
     color: #08c;
     padding: .89rem;
     box-shadow: none;
