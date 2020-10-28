@@ -55,13 +55,13 @@ const Header = ({ t, i18n }) => (
       <Navbar.Collapse>
         <Nav>
           <Nav.Item>
-            <Nav.Link as={Link} to="/apps/" activeClassName="navitem-active">{t('navbar.apps')}</Nav.Link>
+            <Nav.Link as={Link} to="/apps" activeClassName="navitem-active">{t('navbar.apps')}</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/blog/" activeClassName="navitem-active">{t('navbar.blog')}</Nav.Link>
+            <Nav.Link as={Link} to="/blog" activeClassName="navitem-active">{t('navbar.blog')}</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/faq/" activeClassName="navitem-active">{t('navbar.faq')}</Nav.Link>
+            <Nav.Link as={Link} to="/faq" activeClassName="navitem-active">{t('navbar.faq')}</Nav.Link>
           </Nav.Item>
         </Nav>
         <Nav className="ml-auto">
