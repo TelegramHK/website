@@ -103,7 +103,7 @@ const Footer = () => (
       <div className="footer_column footer_column_telegram">
         <h5>Telegram (非官方) 香港支援小組</h5>
         <p className="footer_telegram_description">
-          成立於 2016 年 9 月 1 日，《支援小組》便致力爲香港區的 Telegram
+          成立於 2016 年秋季，支援小組致力爲香港區的 Telegram
           使用者提供支援服務，解答用戶疑難、普及中文化等工作。
         </p>
       </div>
@@ -111,13 +111,13 @@ const Footer = () => (
         <h5>網站地圖</h5>
         <ul>
           <li>
-            <Link to="/faq">常見問題</Link>
+            <Link to="/apps">應用程式</Link>
           </li>
           <li>
             <Link to="/blog">新聞稿</Link>
           </li>
           <li>
-            <Link to="/apps">Apps</Link>
+            <Link to="/faq">常見問題</Link>
           </li>
         </ul>
       </div>
