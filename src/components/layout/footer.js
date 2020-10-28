@@ -2,6 +2,9 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from "styled-components"
 
+// i18n import
+import { withTrans } from '../../i18n/withTrans'
+
 const StyledFooter = styled.footer`
   &&& {
     border-top: 1px solid #e8e8e8;
@@ -66,7 +69,7 @@ const StyledFooter = styled.footer`
 
   @media (max-width: 992px) {
     &&& {
-      padding: 16px 0 16px;
+      padding: 16px 0;
       border-top: 1px solid #e8e8e8;
       min-width: 90%;
       max-width: 95%;
@@ -97,61 +100,54 @@ const StyledFooter = styled.footer`
   }
 `
 
-const Footer = () => (
+const Footer = ({ t, i18n }) => (
   <StyledFooter className="footer mt-auto py-3">
     <div className="footer_columns_wrap footer_desktop">
       <div className="footer_column footer_column_telegram">
-        <h5>Telegram (非官方) 香港支援小組</h5>
-        <p className="footer_telegram_description">
-          成立於 2016 年秋季，支援小組致力爲香港區的 Telegram
-          使用者提供支援服務，解答用戶疑難、普及中文化等工作。
-        </p>
+        <h5>{t('footer.description.header')}</h5>
+        <p className="footer_telegram_description">{t('footer.description.text')}</p>
       </div>
       <div className="footer_column">
-        <h5>網站地圖</h5>
+        <h5>{t('footer.sitemap.header')}</h5>
         <ul>
           <li>
-            <Link to="/apps">應用程式</Link>
+            <Link to="/apps">{t('navbar.apps')}</Link>
           </li>
           <li>
-            <Link to="/blog">新聞稿</Link>
+            <Link to="/blog">{t('navbar.blog')}</Link>
           </li>
           <li>
-            <Link to="/faq">常見問題</Link>
+            <Link to="/faq">{t('navbar.faq')}</Link>
           </li>
         </ul>
       </div>
       <div className="footer_column">
-        <h5>
-          <Link to="/apps#mobile-apps">相關連結</Link>
-        </h5>
+        <h5>{t('footer.external.header')}</h5>
         <ul>
           <li>
-            <a href="https://telegram.how">【臺灣】Telegram 中文支援站</a>
+            <a href={t('footer.external.relatedlinks.0.link')}>{t('footer.external.relatedlinks.0.text')}</a>
           </li>
           <li>
-            <a href="https://www.telegram.url.tw/tDocs/">
-              【臺灣】Telegram 教學文件
-            </a>
+            <a href={t('footer.external.relatedlinks.1.link')}>{t('footer.external.relatedlinks.1.text')}</a>
           </li>
           <li>
-            <a href="https://zh.wikipedia.org/zh-hk/Telegram">維基百科條目頁</a>
+            <a href={t('footer.external.relatedlinks.2.link')}>{t('footer.external.relatedlinks.2.text')}</a>
           </li>
         </ul>
       </div>
       <div className="footer_column footer_column_platform">
         <h5>
-          <a href="https://telegram.org/">官方網站</a>
+          <a href="https://telegram.org/">{t('footer.officials.header')}</a>
         </h5>
         <ul>
           <li>
-            <a href="https://core.telegram.org/api">API 界面</a>
+            <a href="https://core.telegram.org/api">{t('footer.officials.api_docs')}</a>
           </li>
           <li>
-            <a href="https://translations.telegram.org/">翻譯平臺</a>
+            <a href="https://translations.telegram.org/">{t('footer.officials.i18n_platform')}</a>
           </li>
           <li>
-            <a href="https://instantview.telegram.org/">Instant View</a>
+            <a href="https://instantview.telegram.org/">{t('footer.officials.iv_platform')}</a>
           </li>
         </ul>
       </div>
@@ -159,28 +155,27 @@ const Footer = () => (
     <div className="footer_columns_wrap clearfix footer_mobile">
       <div className="footer_column">
         <h5>
-          <Link to="/faq">常見問題</Link>
+          <Link to="/apps">{t('navbar.apps')}</Link>
         </h5>
       </div>
       <div className="footer_column">
         <h5>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog">{t('navbar.blog')}</Link>
         </h5>
       </div>
       <div className="footer_column">
         <h5>
-          <Link to="/apps">Apps</Link>
+          <Link to="/faq">{t('navbar.faq')}</Link>
         </h5>
       </div>
+      {` | `}
       <div className="footer_column">
         <h5>
-          <a href="https://t.me/tlgrmhk_ch">
-            Telegram (非官方) 香港支援頻道
-          </a>
+          <a href="https://t.me/tlgrmhk_ch">{t('footer.mobile.tgchannel_name')}</a>
         </h5>
       </div>
     </div>
   </StyledFooter>
 )
 
-export default Footer
+export default withTrans(Footer)

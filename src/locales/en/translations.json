@@ -4,6 +4,41 @@
     "apps": "Apps",
     "faq": "FAQ"
   },
+  "footer":{
+    "description": {
+      "header": "The (Unofficial) Telegram Support Group of Hong Kong",
+      "text": "Founded in Fall 2016, the team dedicated to provide aids for Hong Kong Telegram users, to solve enquiries like how to use Telegram and localisation issues."
+    },
+    "sitemap": {
+      "header": "Sitemap"
+    },
+    "external": {
+      "header": "Related links (Chinese only)",
+      "relatedlinks": [
+        {
+          "link": "https://telegram.how",
+          "text": "【Taiwan】Telegram 中文支援站"
+        },
+        {
+          "link": "https://www.telegram.url.tw/tDocs/",
+          "text": "【Taiwan】Telegram 教學文件"
+        },
+        {
+          "link": "https://en.wikipedia.org/wiki/Telegram_(software)",
+          "text": "【English】Telegram on Wikipedia"
+        }
+      ]
+    },
+    "officials": {
+      "header": "Official Website",
+      "api_docs": "API Documentation",
+      "i18n_platform": "Translation Platform",
+      "iv_platform": "Instant View Editor"
+    },
+    "mobile": {
+      "tgchannel_name": "Unofficial Support Channel"
+    }
+  },
   "landingpage":{
   },
   "i18n":{

@@ -4,6 +4,41 @@
     "apps": "應用程式",
     "faq": "常見問題"
   },
+  "footer":{
+    "description": {
+      "header": "Telegram (非官方) 香港支援小組",
+      "text": "成立於 2016 年秋季，支援小組致力爲香港區的 Telegram 使用者提供支援服務，解答用戶疑難、普及中文化等工作。"
+    },
+    "sitemap": {
+      "header": "網站地圖"
+    },
+    "external": {
+      "header": "相關連結",
+      "relatedlinks": [
+        {
+          "link": "https://zh.wikipedia.org/zh-hk/Telegram",
+          "text": "【台灣】Telegram 中文頻道"
+        },
+        {
+          "link": "https://telegram.how",
+          "text": "【台灣】Telegram 中文支援站"
+        },
+        {
+          "link": "https://www.telegram.url.tw/tDocs/",
+          "text": "【台灣】Telegram 教學文件"
+        }
+      ]
+    },
+    "officials": {
+      "header": "官方網站",
+      "api_docs": "API 使用說明書",
+      "i18n_platform": "翻譯平台",
+      "iv_platform": "Instant View 編輯器"
+    },
+    "mobile": {
+      "tgchannel_name": "非官方支援頻道"
+    }
+  },
   "landingpage":{
   },
   "i18n":{
