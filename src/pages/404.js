@@ -2,6 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+// i18n import
+import { Trans } from "react-i18next"
+import { withTrans } from '../i18n/withTrans'
+
+// Codes below derived from 'freedomhkg/freedomhkgnet'
+// Courtesy of original authors
 const ErrorWrapper = styled.div`
   height: 100%;
   width: 100%;
@@ -85,29 +91,23 @@ const Footer = styled.div`
   text-align: right;
   position: absolute;
   bottom: 0;
+  padding: 0 1rem;
 `
 
-const NotFoundPage = () => (
+const NotFoundPage = ({ t, i18n }) => (
   <ErrorWrapper>
     <BackgroundImage imageSrc="/images/404soon.jpg" />
 
     <ContentWrapper>
-      <Title>404</Title>
-      {/* Todo: Add i18n */}
+      <Title>{t("404.title")}</Title>
       <Description>
-        「在晚星墜落—— 徬徨午夜...」
-        <br />
-        讓我們帶你歸家吧！ 齊上齊落 :)
+        <Trans i18nKey="404.description">string_a<br/>string_b</Trans>
       </Description>
-      {/* Todo: Redirect to corresponding language home page */}
-      <HomeLink to="/">Home</HomeLink>
+      <HomeLink to="/">{t("404.button")}</HomeLink>
     </ContentWrapper>
 
-    <Footer>
-      圖片取自香港蘋果日報，於 2019 年 8 月 23
-      日在獅子山高空拍攝&nbsp;&nbsp;&nbsp;
-    </Footer>
+    <Footer>{t("404.copyright_note")}</Footer>
   </ErrorWrapper>
 )
 
-export default NotFoundPage
+export default withTrans(NotFoundPage)
