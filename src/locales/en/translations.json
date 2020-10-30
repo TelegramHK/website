@@ -47,9 +47,9 @@
     }
   },
   "404":{
-    "title": "Lost your way?",
-    "h1": "Lost your way home?",
-    "tagline": "Come, let us home.",
-    "button": "« Homepage"
+    "title": "404",
+    "description": "\"Stars may fade, as darkness fills the air...\"<1/>Let us home. Together we stand. :)",
+    "button": "« Home",
+    "copyright_note": "Background picture by Hong Kong Apple Daily, taken August 23, 2019 at the Lion Rock, Hong Kong."
   }
 }
