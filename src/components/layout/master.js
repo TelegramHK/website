@@ -12,9 +12,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 
-// import Location from router
-import { useLocation } from "@reach/router"
-
 // Bootstrap imports
 import "bootstrap/dist/css/bootstrap.min.css" // Core import
 
