@@ -29,11 +29,8 @@ const StyledFooter = styled.footer`
     width: 290px;
     padding-right: 50px;
   }
-  .footer_column:last-child {
-    padding-right: 0;
-  }
-  .footer_column:first-child {
-    padding-left: 0;
+  .footer_column_platform {
+    padding-right: 50px;
   }
   .footer_column h5 {
     font-size: 14px;
