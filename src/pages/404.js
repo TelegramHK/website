@@ -96,7 +96,7 @@ const Footer = styled.div`
 
 const NotFoundPage = ({ t, i18n }) => (
   <ErrorWrapper>
-    <BackgroundImage imageSrc="/images/404soon.jpg" />
+    <BackgroundImage imageSrc="/images/48731491086_5d28480427_o.jpg" />
 
     <ContentWrapper>
       <Title>{t("404.title")}</Title>
