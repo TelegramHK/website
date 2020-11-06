@@ -10,8 +10,8 @@ const StyledFooter = styled.footer`
     border-top: 1px solid #e8e8e8;
     min-width: 900px;
     max-width: 1140px;
-    margin: 0 auto;
-    padding: 28px 0 34px;
+    margin: 10px auto 0;
+    padding: 28px 0 34px !important;
   }
   .footer_mobile {
     display: none;
