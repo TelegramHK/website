@@ -16,16 +16,16 @@
       "header": "Related links (Chinese only)",
       "relatedlinks": [
         {
+          "link": "https://zh.wikipedia.org/zh-hk/Telegram",
+          "text": "Telegram 中文頻道"
+        },
+        {
           "link": "https://telegram.how",
           "text": "Telegram 中文支援站"
         },
         {
           "link": "https://www.telegram.url.tw/tDocs/",
           "text": "Telegram 教學文件"
-        },
-        {
-          "link": "https://en.wikipedia.org/wiki/Telegram_(software)",
-          "text": "Telegram on Wikipedia"
         }
       ]
     },
