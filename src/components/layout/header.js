@@ -12,7 +12,7 @@ import { withTrans } from '../../i18n/withTrans'
 const TelegramHeaderNav = styled(Navbar)`
   &&& {
     border-bottom: 1px solid #e8e8e8;
-    margin: 0 0 13px;
+    margin: 0;
     padding: 0 1rem;
     background: white;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.13);
