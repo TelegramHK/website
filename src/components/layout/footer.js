@@ -11,7 +11,11 @@ const StyledFooter = styled.footer`
     min-width: 900px;
     max-width: 1140px;
     margin: 10px auto 0;
-    padding: 28px 0 34px !important;
+    padding: 23px 0 34px !important;
+
+    &[lang=en]{
+      padding: 23px 0 0 !important;
+    }
   }
   .footer_mobile {
     display: none;
@@ -101,7 +105,7 @@ const StyledFooter = styled.footer`
 `
 
 const Footer = ({ t, i18n }) => (
-  <StyledFooter className="footer mt-auto py-3">
+  <StyledFooter className="footer mt-auto py-3" lang={i18n.languages[0]}>
     <div className="footer_columns_wrap footer_desktop">
       <div className="footer_column footer_column_telegram">
         <h5>{t('footer.description.header')}</h5>
