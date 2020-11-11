@@ -8,10 +8,10 @@ i18next
     fallbackLng: 'hk',
     resources: {
       'hk': {
-        translations: require('../locales/hk/translations.json')
+        translations: require('@/locales/hk/translations.json')
       },
       en: {
-        translations: require('../locales/en/translations.json')
+        translations: require('@/locales/en/translations.json')
       }
     },
     ns: ['translations'],

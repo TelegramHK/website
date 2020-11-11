@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout/global/master"
-import SEO from "../components/seo"
+import Layout from "@components/layout/global/master"
+import SEO from "@components/seo"
 
 // i18n import
 import { useTranslation } from 'react-i18next'
