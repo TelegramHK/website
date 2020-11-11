@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next'
 // Navbar styling
 const TelegramHeaderNav = styled(Navbar)`
   &&& {
+    flex-shrink: 0;
     border-bottom: 1px solid #e8e8e8;
     margin: 0;
     padding: 0 1rem;
@@ -67,7 +68,7 @@ const Header = () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <TelegramHeaderNav expand="lg" sticky="top">
+    <TelegramHeaderNav collapseOnSelect={true} expand="lg" sticky="top">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>

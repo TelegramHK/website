@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 const StyledFooter = styled.footer`
   &&& {
+    flex-shrink: 0;
     border-top: 1px solid #e8e8e8;
     min-width: 900px;
     max-width: 1140px;
@@ -73,10 +74,9 @@ const StyledFooter = styled.footer`
 
   @media (max-width: 992px) {
     &&& {
-      padding: 16px 0;
+      padding: 8px 0 !important;
       border-top: 1px solid #e8e8e8;
       min-width: 90%;
-      max-width: 95%;
     }
     .footer_desktop {
       display: none;
