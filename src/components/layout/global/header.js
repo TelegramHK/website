@@ -62,6 +62,16 @@ const TelegramHeaderNav = styled(Navbar)`
     opacity: 1;
     transform: scaleX(1.0) scaleY(1.0);
   }
+
+  .nav-item.dropdown .dropdown-menu {
+    left: -5.3125em;
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .nav-item.dropdown .dropdown-menu {
+      left: -5.03em;
+    }
+  }
 `
 
 const Header = () => {
