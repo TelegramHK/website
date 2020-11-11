@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 // i18n import
-import "../../i18n/config"
+import "../../../i18n/config"
 
 import Header from "./header"
 import Footer from "./footer"
