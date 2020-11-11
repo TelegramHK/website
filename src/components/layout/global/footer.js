@@ -95,7 +95,7 @@ const StyledFooter = styled.footer`
       padding: 0 8px;
       h5 {
         color: #08c;
-        font-size: 12px;
+        font-size: 0.89em;
         font-weight: normal;
         text-transform: uppercase;
         margin: 0;
