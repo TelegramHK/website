@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 // i18n import
-import { Trans } from "react-i18next"
-import { withTrans } from '../i18n/withTrans'
+import { Trans, useTranslation } from "react-i18next"
 
 // Codes below derived from 'freedomhkg/freedomhkgnet'
 // Courtesy of original authors
@@ -94,20 +93,24 @@ const Footer = styled.div`
   padding: 0 1rem;
 `
 
-const NotFoundPage = ({ t, i18n }) => (
-  <ErrorWrapper>
-    <BackgroundImage imageSrc="/images/48731491086_5d28480427_o.jpg" />
+const NotFoundPage = () => {
+  const { t } = useTranslation()
 
-    <ContentWrapper>
-      <Title>{t("404.title")}</Title>
-      <Description>
-        <Trans i18nKey="404.description">string_a<br/>string_b</Trans>
-      </Description>
-      <HomeLink to="/">{t("404.button")}</HomeLink>
-    </ContentWrapper>
+  return (
+    <ErrorWrapper>
+      <BackgroundImage imageSrc="/images/48731491086_5d28480427_o.jpg" />
 
-    <Footer>{t("404.copyright_note")}</Footer>
-  </ErrorWrapper>
-)
+      <ContentWrapper>
+        <Title>{t("404.title")}</Title>
+        <Description>
+          <Trans i18nKey="404.description">string_a<br/>string_b</Trans>
+        </Description>
+        <HomeLink to="/">{t("404.button")}</HomeLink>
+      </ContentWrapper>
 
-export default withTrans(NotFoundPage)
+      <Footer>{t("404.copyright_note")}</Footer>
+    </ErrorWrapper>
+  )
+}
+
+export default NotFoundPage

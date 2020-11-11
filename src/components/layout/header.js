@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 // i18n import
-import { withTrans } from '../../i18n/withTrans'
+import { useTranslation } from 'react-i18next'
 
 // Navbar styling
 const TelegramHeaderNav = styled(Navbar)`
@@ -63,34 +63,38 @@ const TelegramHeaderNav = styled(Navbar)`
   }
 `
 
-const Header = ({ t, i18n }) => (
-  <TelegramHeaderNav expand="lg" sticky="top">
-    <Container>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse>
-        <Nav>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/" activeClassName="navitem-active">{t('navbar.index')}</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/apps" activeClassName="navitem-active">{t('navbar.apps')}</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/blog" activeClassName="navitem-active">{t('navbar.blog')}</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/faq" activeClassName="navitem-active">{t('navbar.faq')}</Nav.Link>
-          </Nav.Item>
-        </Nav>
-        <Nav className="ml-auto">
-          <NavDropdown title={t('i18n.selector.label')}>
-            <NavDropdown.Item onClick={()=>i18n.changeLanguage("en")}>English</NavDropdown.Item>
-            <NavDropdown.Item onClick={()=>i18n.changeLanguage("hk")}>繁體中文 (香港)</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </TelegramHeaderNav>
-)
+const Header = () => {
+  const { t, i18n } = useTranslation()
 
-export default withTrans(Header)
+  return (
+    <TelegramHeaderNav expand="lg" sticky="top">
+      <Container>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse>
+          <Nav>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/" activeClassName="navitem-active">{t('navbar.index')}</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/apps" activeClassName="navitem-active">{t('navbar.apps')}</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/blog" activeClassName="navitem-active">{t('navbar.blog')}</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/faq" activeClassName="navitem-active">{t('navbar.faq')}</Nav.Link>
+            </Nav.Item>
+          </Nav>
+          <Nav className="ml-auto">
+            <NavDropdown title={t('i18n.selector.label')}>
+              <NavDropdown.Item onClick={()=>i18n.changeLanguage("en")}>English</NavDropdown.Item>
+              <NavDropdown.Item onClick={()=>i18n.changeLanguage("hk")}>繁體中文 (香港)</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </TelegramHeaderNav>
+  )
+}
+
+export default Header
