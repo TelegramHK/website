@@ -86,12 +86,12 @@ const Header = () => {
             <Nav.Item>
               <Nav.Link as={Link} to="/" activeClassName="navitem-active">{t('navbar.index')}</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link as={Link} to="/apps" activeClassName="navitem-active">{t('navbar.apps')}</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
+            </Nav.Item> */}
+            {/* <Nav.Item>
               <Nav.Link as={Link} to="/blog" activeClassName="navitem-active">{t('navbar.blog')}</Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
             <Nav.Item>
               <Nav.Link as={Link} to="/faq" activeClassName="navitem-active">{t('navbar.faq')}</Nav.Link>
             </Nav.Item>
