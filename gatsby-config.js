@@ -12,6 +12,14 @@ module.exports = {
         implementation: require("sass"),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `mdcontents`,
+        path: `${__dirname}/src/mdcontents`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-remove-trailing-slashes`,
