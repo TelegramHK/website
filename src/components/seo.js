@@ -10,50 +10,39 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
             description
             author
+            image
           }
         }
       }
     `
   )
 
+  const metaImage = site.siteMetadata.image
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = title
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-      ].concat(meta)}
-    />
+    <React.Fragment>
+      <Helmet>
+        {/* General tags */}
+        <title>{defaultTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="icon" type="image/png" href={metaImage} />
+
+        {/* OpenGraph tags */}
+        <meta property="og:title" content={defaultTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={metaImage} />
+      </Helmet>
+    </React.Fragment>
   )
 }
 
