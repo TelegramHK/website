@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div id="siteBody" className="d-flex flex-column">
+    <div id="siteBody" className="d-flex flex-column min-vh-100">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="page-content">
         <main>{children}</main>
